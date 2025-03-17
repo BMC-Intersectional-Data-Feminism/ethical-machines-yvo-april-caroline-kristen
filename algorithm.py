@@ -2,10 +2,12 @@ import urban_planning
 
 # Example algorithm: Always picks the non-vehicle option
 def always_pick_non_vehicle(option1, option2):
-    """This algorithm always picks the non-vehicle if possible."""
-    if option1[0] in urban_planning.all_non_vehicles:
+    """This algorithm always picks the non-vehicle if possible.
+    It will return first the picked option and second the non-chosen option. """
+    
+    if option1[0] in urban_planning.all_non_vehicles: ## Check if option 1 is a non-vehicle, if so, pick that. 
         return option1, option2
-    elif option2[0] in urban_planning.all_non_vehicles:
+    elif option2[0] in urban_planning.all_non_vehicles:  ## If option 1 is not a non-vehicle, check if option 2 is. If so, pick that. 
         return option2, option1
     else:
         return option1, option2  # Default to first option if both are vehicles
