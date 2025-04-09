@@ -35,36 +35,6 @@ def student_algorithm(option1, option2):
             return option1, option2
     elif option2[0] in possible_emergency_vehicles:
         return option2, option1
-    else:
-        print("No emergency vehicles")
-    
-    if option1[0] in possible_pedestrians:
-        if option2[0] in possible_pedestrians:
-            selected = random.choice([option1, option2])
-            if option1 == selected:
-                return selected, option2
-            else:
-                return selected, option1
-        else:
-            return option1, option2
-    elif option2[0] in possible_pedestrians:
-        return option2, option1
-    else:
-        print("No pedestrians")
-    
-    if option1[0] in possible_animal:
-        if option2[0] in possible_animal:
-            selected = random.choice([option1, option2])
-            if option1 == selected:
-                return selected, option2
-            else:
-                return selected, option1
-        else:
-            return option1, option2
-    elif option2[0] in possible_animal:
-        return option2, option1
-    else:
-        print("No animals")
     
     if option1[0] in possible_public_transit:
         if option2[0] in possible_public_transit:
@@ -77,8 +47,30 @@ def student_algorithm(option1, option2):
             return option1, option2
     elif option2[0] in possible_public_transit:
         return option2, option1
-    else:
-        print("No public transit")
+    
+    if option1[0] in possible_pedestrians:
+        if option2[0] in possible_pedestrians:
+            selected = random.choice([option1, option2])
+            if option1 == selected:
+                return selected, option2
+            else:
+                return selected, option1
+        else:
+            return option1, option2
+    elif option2[0] in possible_pedestrians:
+        return option2, option1
+    
+    if option1[0] in possible_animal:
+        if option2[0] in possible_animal:
+            selected = random.choice([option1, option2])
+            if option1 == selected:
+                return selected, option2
+            else:
+                return selected, option1
+        else:
+            return option1, option2
+    elif option2[0] in possible_animal:
+        return option2, option1
     
     if option1[0] in possible_cyclist:
         if option2[0] in possible_cyclist:
@@ -91,8 +83,6 @@ def student_algorithm(option1, option2):
             return option1, option2
     elif option2[0] in possible_cyclist:
         return option2, option1
-    else:
-        print("No cyclists")
 
     if option1[0] in possible_private_vehicles:
         if option2[0] in possible_private_vehicles:
@@ -105,8 +95,6 @@ def student_algorithm(option1, option2):
             return option1, option2
     elif option2[0] in possible_private_vehicles:
         return option2, option1
-    else:
-        print("No private vehicles")
 
     if option1[0] in possible_robot:
         if option2[0] in possible_robot:
@@ -119,8 +107,6 @@ def student_algorithm(option1, option2):
             return option1, option2
     elif option2[0] in possible_robot:
         return option2, option1
-    else:
-        print("No robots yay")
 
 # Function to run the simulation using a given algorithm
 # Run the activity
